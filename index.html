@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API UAH converter</title>
+    <link type="text/css" rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+      <a href="" class="nav-brand">API UAH converter</a>
+      <ul>
+        <li><a href="#" class="nav-item btn btn-default">About</a></li>
+        <li><a href="#" class="nav-item btn btn-default">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="container" id="main">
+        <div class="grid">
+            <div class="custom-select">
+                <label for="base-currency">Оберіть валюту:</label>
+                <select id="base-currency">
+                    <option value="" selected disabled hidden>-</option>
+                    <option value="USD">United States Dollar ($)</option>
+                    <option value="EUR">Euro (€)</option>
+                    <option value="GBP">Pound Sterling (₤)</option>
+                    <option value="CAD">Canadian Dollar (C$)</option>
+                    <option value="JPY">Japanese Yen (¥)</option>
+                    <option value="AUD">Australian Dollar (A$)</option>
+                    <option value="CHF">Swiss Franc (Fr)</option>
+                    <option value="CNY">Chinese Renminbi (¥)</option>
+                    <option value="SEK">Swedish Krona (kr)</option>
+                    <option value="INR">Indian Rupee (₹)</option>
+                    <option value="NZD">New Zealand Dollar (NZ$)</option>
+                    <option value="KRW">South Korean won (₩)</option>
+                    <option value="RUB">Russian ruble (₽)</option>
+                    <option value="TRY">Turkish lira (₺)</option>
+                    <option value="PLN">Polish złoty (zł)</option>
+                </select>
+            </div>
+            <div>
+                |
+            </div>
+            <div>
+                <p>UAH (₴)</p>
+            </div>
+        </div>
+        <div class="result-grid">
+            <div>
+                <label for="input-number">Введіть сумму:</label>
+                <input type="number" id="input-number">
+            </div>
+            <p> = </p>
+            <p id="conversion-result">1</p>
+        </div>
+
+    </div>
+
+    <footer id="footer-wrapper">
+        <a href="#" target="_blank">Register</a>
+        <a href="#" target="_blank">About</a>
+        <a href="#" target="_blank">Contact</a>
+    </footer>
+
+    <script src="/index.js" type="module"></script>
+    <script src="/fetch-wrapper.js" type="module"></script>
+</body>
+</html>
