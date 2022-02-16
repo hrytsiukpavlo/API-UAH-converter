@@ -14,9 +14,9 @@ const getConversionRates = () => {
     API.get(`/latest/${base.value}`)
     .then(data => {
         if (input.value) {
-            result.textContent = (data.conversion_rates['UAH'] * input.value).toFixed(2);
+            result.textContent = (data.conversion_rates['UAH'] * input.value).toFixed(2) + ' ₴';
         } else {
-            result.textContent = (data.conversion_rates['UAH']).toFixed(2);
+            result.textContent = (data.conversion_rates['UAH']).toFixed(2) + ' ₴';
         }
     });
 }
@@ -28,7 +28,7 @@ const inputChangeHandler = (event) =>{
         API 
             .get(`/latest/${base.value}`)
             .then(data => {
-                result.textContent = (data.conversion_rates['UAH'] * event.target.value).toFixed(2);
+                result.textContent = (data.conversion_rates['UAH'] * event.target.value).toFixed(2) + ' ₴';
             });
     }
 }
@@ -42,3 +42,4 @@ input.addEventListener('keyup', function(event){
         inputChangeHandler(event);
     }, 400);
 });
+input.addEventListener('change', inputChangeHandler)
