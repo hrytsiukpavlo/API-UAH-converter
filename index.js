@@ -6,11 +6,13 @@ const base = document.querySelector("#base-currency");
 const result = document.querySelector("#conversion-result");
 const input = document.querySelector('#input-number');
 
+const regex = /^\d+$/;
+
 
 const getConversionRates = () => {
     if (!input.value) {
         input.value = 1;
-    }
+    } 
     API.get(`/latest/${base.value}`)
     .then(data => {
         if (input.value) {
@@ -37,9 +39,15 @@ base.addEventListener('change', getConversionRates);
 
 let delayTimer;
 input.addEventListener('keyup', function(event){
+    if(input.value < 1) {
+        input.value = 1;
+    } else if(input.value.length > 10) {
+        alert('Ви вийшли за максимально допустиме значення');
+        input.value = 1;
+    } 
     clearTimeout(delayTimer);
     delayTimer = setTimeout(function(){
         inputChangeHandler(event);
     }, 400);
 });
-input.addEventListener('change', inputChangeHandler)
+input.addEventListener('change', inputChangeHandler);
