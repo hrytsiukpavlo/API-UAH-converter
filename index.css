@@ -285,3 +285,29 @@
       margin: 5vh auto;
   }
 
+  @media screen and (max-width: 660px) {
+    #split {
+      display: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      font-size: 30px;
+    }
+    #equal {
+      display: none;
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      font-size: 30px;
+      margin: 5vh auto;
+    }
+    select {
+      max-width: 200px;
+      width: 100%;
+    }
+
+  }
