@@ -319,4 +319,13 @@
 
   }
 
+  @media screen and (max-height: 660px) {
+    #footer-wrapper {
+      display: none;
+    }
+    #navbar {
+      display: none;
+    }
+  }
+
   
