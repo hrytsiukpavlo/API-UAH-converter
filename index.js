@@ -40,5 +40,5 @@ input.addEventListener('keyup', function(event){
     clearTimeout(delayTimer);
     delayTimer = setTimeout(function(){
         inputChangeHandler(event);
-    }, 700);
+    }, 400);
 });
