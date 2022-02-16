@@ -308,8 +308,5 @@
       max-width: 200px;
       width: 100%;
     }
-    input[type=number]:focus {
-      visibility: hidden;
-    }
 
   }
