@@ -34,4 +34,4 @@ const inputChangeHandler = (event) =>{
 }
 
 base.addEventListener('change', getConversionRates);
-input.addEventListener('change', inputChangeHandler);
+input.addEventListener('keyup', inputChangeHandler);
