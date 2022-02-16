@@ -36,9 +36,9 @@ const inputChangeHandler = (event) =>{
 base.addEventListener('change', getConversionRates);
 
 let delayTimer;
-input.addEventListener('keyup', function(){
+input.addEventListener('keyup', function(event){
     clearTimeout(delayTimer);
     delayTimer = setTimeout(function(){
-        inputChangeHandler();
-    }, 1500);
+        inputChangeHandler(event);
+    }, 700);
 });
