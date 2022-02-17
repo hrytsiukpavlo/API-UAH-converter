@@ -289,6 +289,11 @@
     flex-direction: column;
   }
 
+  .warning {
+    color: red;
+    font-size: 20px;
+  }
+
   @media screen and (max-width: 660px) {
     #split {
       display: none;

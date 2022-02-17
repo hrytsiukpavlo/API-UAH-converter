@@ -5,14 +5,21 @@ const API = new FetchWrapper("https://v6.exchangerate-api.com/v6/82fdb027659aadf
 const base = document.querySelector("#base-currency");
 const result = document.querySelector("#conversion-result");
 const input = document.querySelector('#input-number');
-
-const regex = /^\d+$/;
+const paragraph = document.createElement('p');
+paragraph.classList.add('warning');
+const currency_warning = document.createTextNode('Оберіть валюту');
+const main_input = document.querySelector('#main-input');
+const limit_warning = document.createTextNode('Введіть менше значення');
 
 
 const getConversionRates = () => {
     if (!input.value) {
         input.value = 1;
-    } 
+    }
+    if (base.value) {
+        document.querySelector('.warning').innerHTML = '';
+    }
+
     API.get(`/latest/${base.value}`)
     .then(data => {
         if (input.value) {
@@ -23,10 +30,15 @@ const getConversionRates = () => {
     });
 }
 
-const inputChangeHandler = (event) =>{
+const inputChangeHandler = (event) => {
     if (!base.value){
-        alert('Оберіть валюту')
+        paragraph.appendChild(currency_warning);
+        main_input.appendChild(paragraph);
+    } else if(input.value.length > 9) {
+        paragraph.appendChild(limit_warning);
+        main_input.appendChild(paragraph);
     } else {
+        document.querySelector('.warning').innerHTML = '';
         API 
             .get(`/latest/${base.value}`)
             .then(data => {
@@ -39,12 +51,6 @@ base.addEventListener('change', getConversionRates);
 
 let delayTimer;
 input.addEventListener('keyup', function(event){
-    if(input.value < 1) {
-        input.value = 1;
-    } else if(input.value.length > 10) {
-        alert('Ви вийшли за максимально допустиме значення');
-        input.value = 1;
-    } 
     clearTimeout(delayTimer);
     delayTimer = setTimeout(function(){
         inputChangeHandler(event);
