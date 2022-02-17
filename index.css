@@ -20,7 +20,7 @@
     --accent-4: #92cfc7;
     --accent-5: #d7f2ef;
   }
-  
+
   body {
     margin: 0;
     padding: 0;
@@ -238,7 +238,7 @@
   }
   
   .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 10% auto;
     padding: 0 20px;
     font-family: 'Noto Sans Display', sans-serif;
@@ -292,7 +292,8 @@
 
   .warning {
     color: red;
-    font-size: 20px;
+    font-size: 15px;
+    max-width: 190px;
   }
 
   @media screen and (max-width: 660px) {
