@@ -239,6 +239,7 @@
   
   .container {
     max-width: 850px;
+    min-width: 710px;
     margin: 10% auto;
     padding: 0 20px;
     font-family: 'Noto Sans Display', sans-serif;
@@ -323,6 +324,9 @@
     }
     #footer-wrapper {
       display: none;
+    }
+    .container {
+      min-width: 320px;
     }
 
   }
