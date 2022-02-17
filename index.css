@@ -20,14 +20,12 @@
     --accent-4: #92cfc7;
     --accent-5: #d7f2ef;
   }
-  html {
-    overflow: hidden;
-  }
-
+  
   body {
     margin: 0;
     padding: 0;
     background-color: #fcde67;
+    overflow: hidden;
   }
   
   h1 {
