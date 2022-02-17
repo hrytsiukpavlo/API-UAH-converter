@@ -7,11 +7,10 @@ const result = document.querySelector("#conversion-result");
 const input = document.querySelector('#input-number');
 const paragraph = document.createElement('p');
 paragraph.classList.add('warning');
-const currency_warning = document.createTextNode('Оберіть валюту');
+const currency_warning = document.createTextNode('Оберіть валюту.');
 const main_input = document.querySelector('#main-input');
-const limit_warning = document.createTextNode('Введіть менше значення');
-const characters_warning = document.createTextNode('Видаліть сторонні символи або введіть значення');
-const empty_warning = document.createTextNode('Введіть значення');
+const limit_warning = document.createTextNode('Значення занадто велике. \n');
+const characters_warning = document.createTextNode('Видаліть сторонні символи або введіть значення. \n');
 
 
 const getConversionRates = () => {
