@@ -44,7 +44,7 @@ const inputChangeHandler = (event) => {
         main_input.appendChild(paragraph);
     } else if (input.value < 0) {
         input.value = Math.abs(input.value);
-    } else if (!input.value.match(/^\d+$/)) {
+    } else if (!input.value.match(/^\d[\d,]*(\.\d+)?$/)) {
         paragraph.appendChild(characters_warning);
         main_input.appendChild(paragraph);
     } else {
