@@ -338,6 +338,9 @@
     #navbar {
       display: none;
     }
+    body {
+      overflow: visible;
+    }
   }
 
   
