@@ -8,7 +8,7 @@ const input = document.querySelector('#input-number');
 const paragraph = document.createElement('p');
 paragraph.classList.add('warning');
 const currency_warning = document.createTextNode('Оберіть валюту.');
-const main_input = document.querySelector('#main-input');
+const main_input = document.querySelector('#warning-notification');
 const limit_warning = document.createTextNode('Значення занадто велике. \n');
 const characters_warning = document.createTextNode('Видаліть сторонні символи або введіть значення. \n');
 

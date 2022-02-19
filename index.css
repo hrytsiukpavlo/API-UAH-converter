@@ -283,9 +283,17 @@
       grid-template-columns: repeat(3, 1fr);
       place-items: center;
       font-size: 30px;
-      margin: 5vh auto;
+      margin: 5vh auto 0;
       height: 200px;
   }
+  .warning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* place-items: center; */
+    font-size: 30px;
+    height: 100px;
+    justify-items: center;
+}
 
   #wrapper {
     display: flex;
@@ -296,6 +304,7 @@
     color: red;
     font-size: 15px;
     max-width: 190px;
+    margin: 0;
   }
 
   @media screen and (max-width: 660px) {
