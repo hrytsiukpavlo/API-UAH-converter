@@ -11,7 +11,7 @@ const currency_warning = document.createTextNode('Оберіть валюту.')
 const main_input = document.querySelector('#warning-notification');
 const limit_warning = document.createTextNode('Значення занадто велике. \n');
 const characters_warning = document.createTextNode('Видаліть сторонні символи або введіть значення. \n');
-
+const empty_warning = document.createTextNode('Введіть значення \n');
 
 const getConversionRates = () => {
     if (!input.value) {

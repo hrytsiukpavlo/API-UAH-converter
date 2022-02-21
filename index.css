@@ -343,6 +343,9 @@
     .container {
       min-width: 320px;
     }
+    body {
+      overflow: visible;
+    }
 
   }
 
